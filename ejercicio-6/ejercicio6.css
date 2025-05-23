@@ -1,0 +1,139 @@
+/* Esto es como el "fondo" de toda nuestra página. */
+/* Le damos un color suave, y hacemos que todo el contenido se centre bonito. */
+body {
+    font-family: 'Segoe UI', sans-serif; /* Una fuente amigable y fácil de leer */
+    background-color: #f5f7fa; /* Un gris muy suave, casi blanco */
+    display: flex; /* Para ayudar a centrar los elementos */
+    justify-content: center; /* Centrar de lado a lado */
+    align-items: center; /* Centrar de arriba a abajo */
+    min-height: 100vh; /* Que ocupe toda la altura de la pantalla */
+    margin: 0; /* Quitamos márgenes por defecto */
+    padding: 20px; /* Un pequeño respiro en los bordes */
+}
+
+/* Esta es la "caja" principal de nuestro formulario. */
+/* La hacemos blanca, con esquinas suaves y una sombra sutil para que destaque. */
+.container {
+    background-color: #ffffff; /* Fondo blanco para el formulario */
+    padding: 35px; /* Espacio generoso por dentro */
+    border-radius: 12px; /* Bordes suaves y redondos */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08); /* Una sombra ligera y elegante */
+    text-align: center; /* Todo el texto dentro, al centro */
+    max-width: 450px; /* Un tamaño cómodo para el formulario */
+    width: 100%; /* Que se adapte a pantallas más pequeñas */
+}
+
+/* El título grande de nuestro formulario */
+h1 {
+    color: #2c3e50; /* Un azul oscuro, muy serio y legible */
+    margin-bottom: 15px; /* Espacio debajo del título */
+    font-size: 2em; /* Un tamaño de fuente que se note */
+}
+
+/* El pequeño texto de ayuda */
+p {
+    color: #7f8c8d; /* Un gris medio para el texto */
+    margin-bottom: 30px; /* Espacio para respirar antes de los campos */
+    font-size: 1.05em;
+}
+
+/* Cada grupo de entrada: la etiqueta y su caja para escribir */
+.input-group {
+    margin-bottom: 20px; /* Separación entre cada campo */
+    text-align: left; /* Alineamos las etiquetas a la izquierda */
+}
+
+/* Las etiquetas (Nombre, Apellido, etc.) */
+.input-group label {
+    display: block; /* Para que cada etiqueta vaya en su propia línea */
+    margin-bottom: 8px; /* Espacio entre la etiqueta y la caja */
+    color: #34495e; /* Un gris azulado oscuro, fácil de leer */
+    font-weight: bold; /* Hacemos las etiquetas un poco más fuertes */
+    font-size: 1.05em;
+}
+
+/* Las cajas donde vamos a poner los datos */
+.input-group input[type="text"],
+.input-group input[type="number"],
+.input-group input[type="email"] {
+    width: 100%; /* Que ocupe todo el ancho disponible */
+    padding: 12px; /* Espacio interno para que no se vea apretado */
+    border: 1px solid #dcdfe6; /* Un borde gris muy suave */
+    border-radius: 8px; /* Esquinas suaves para las cajas */
+    box-sizing: border-box; /* Para que el padding no "agrandes" la caja */
+    font-size: 1em; /* Tamaño de letra normal */
+    color: #333; /* Color de texto oscuro para lo que escribimos */
+    transition: border-color 0.2s ease; /* Pequeña animación al enfocar */
+}
+
+/* Cuando haces clic en una caja, que el borde se ilumine de azul */
+.input-group input:focus {
+    border-color: #3498db; /* Un azul brillante al enfocar */
+    outline: none; /* Quitamos el contorno feo que pone el navegador */
+}
+
+/* El texto de ejemplo que aparece dentro de las cajas */
+.input-group input::placeholder {
+    color: #bdc3c7; /* Un gris claro para el ejemplo */
+}
+
+/* ¡El botón de "Enviar"! */
+button {
+    background-color: #3498db; /* Un azul primario y llamativo */
+    color: white; /* Texto blanco en el botón */
+    padding: 15px 30px; /* Espacio interno del botón */
+    border: none; /* Sin borde */
+    border-radius: 8px; /* Esquinas redondeadas */
+    cursor: pointer; /* Que aparezca la manita al pasar el ratón */
+    font-size: 1.2em; /* Un buen tamaño para el texto del botón */
+    font-weight: bold; /* Texto en negrita */
+    transition: background-color 0.3s ease, transform 0.1s ease; /* Animaciones suaves */
+    margin-top: 10px; /* Un poco de espacio arriba del botón */
+}
+
+/* Cuando el ratón está encima del botón */
+button:hover {
+    background-color: #2980b9; /* Un azul un poco más oscuro */
+    transform: translateY(-2px); /* Un pequeño "salto" hacia arriba */
+}
+
+/* Cuando haces clic en el botón */
+button:active {
+    transform: translateY(0); /* Vuelve a su posición normal */
+}
+
+/* ESTILOS PARA LOS MENSAJES DE VALIDACIÓN */
+
+/* Contenedor general del mensaje */
+.mensaje {
+    margin-top: 25px; /* Espacio arriba del mensaje */
+    padding: 15px; /* Espacio interno del mensaje */
+    border-radius: 8px; /* Bordes suaves */
+    font-weight: bold; /* Texto en negrita */
+    font-size: 1.05em;
+    text-align: center;
+    /* Para que el mensaje aparezca y desaparezca suavemente */
+    display: none; /* Inicialmente oculto */
+    opacity: 0; /* Empieza transparente */
+    transition: opacity 0.5s ease-in-out, background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Estilo para un mensaje de éxito (validación correcta) */
+.mensaje.success {
+    background-color: #e8f8f5; /* Un verde pastel muy clarito */
+    color: #27ae60; /* Un verde vibrante para el texto */
+    border: 1px solid #27ae60; /* Borde del mismo verde */
+}
+
+/* Estilo para un mensaje de error (validación fallida) */
+.mensaje.error {
+    background-color: #fae4e6; /* Un rojo pastel muy clarito */
+    color: #c0392b; /* Un rojo fuerte para el texto */
+    border: 1px solid #c0392b; /* Borde del mismo rojo */
+}
+
+/* Clase para mostrar el mensaje (el JavaScript la agregará) */
+.mensaje.show {
+    display: block; /* Hace que el mensaje sea visible */
+    opacity: 1; /* Lo hace completamente visible (sin transparencia) */
+}

@@ -1,0 +1,96 @@
+/* Esto es como el "fondo" de toda nuestra página. */
+/* Le damos un color suave, y hacemos que todo el contenido se centre bien. */
+body {
+    font-family: 'Segoe UI', sans-serif; /* Una fuente amable y fácil de leer */
+    background-color: #f0fff0; /* Un verde pastel muy clarito, como la hierba */
+    display: flex; /* Para ayudar a centrar los elementos */
+    justify-content: center; /* Centrar de lado a lado */
+    align-items: center; /* Centrar de arriba a abajo */
+    min-height: 100vh; /* Que ocupe toda la altura de la pantalla */
+    margin: 0; /* Quitamos márgenes por defecto */
+}
+
+/* Esta es la "caja" principal de nuestra calculadora de terreno. */
+/* La hacemos blanca, con esquinas suaves y una sombra sutil para que destaque. */
+.container {
+    background-color: #ffffff; /* Fondo blanco para la calculadora */
+    padding: 30px; /* Espacio generoso por dentro */
+    border-radius: 15px; /* Bordes bien redonditos */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Una sombra ligera, como si flotara */
+    text-align: center; /* Todo el texto dentro, al centro */
+    max-width: 400px; /* Un tamaño cómodo para la calculadora */
+    width: 90%; /* Que se adapte a pantallas más pequeñas */
+}
+
+/* El título grande de nuestra calculadora */
+h1 {
+    color: #4CAF50; /* Un verde vibrante y amigable */
+    margin-bottom: 15px; /* Espacio debajo del título */
+    font-size: 1.9em; /* Un tamaño de fuente agradable */
+}
+
+/* El pequeño texto de ayuda */
+p {
+    color: #6c757d; /* Un gris suave para el texto */
+    margin-bottom: 25px; /* Espacio para respirar antes de los campos */
+}
+
+/* Cada grupo de entrada: la etiqueta y su caja para escribir */
+.input-group {
+    margin-bottom: 20px; /* Separación entre cada campo */
+    text-align: left; /* Alineamos las etiquetas a la izquierda */
+}
+
+/* Las etiquetas (Medida A, Medida B, etc.) */
+.input-group label {
+    display: block; /* Para que cada etiqueta vaya en su propia línea */
+    margin-bottom: 8px; /* Espacio entre la etiqueta y la caja */
+    color: #3e444a; /* Un gris oscuro, fácil de leer */
+    font-weight: bold; /* Hacemos las etiquetas un poco más fuertes */
+}
+
+/* Las cajas donde vamos a poner las medidas */
+.input-group input[type="number"] {
+    width: 100%; /* Que ocupe todo el ancho disponible */
+    padding: 10px; /* Espacio interno para que no se vea apretado */
+    border: 1px solid #d4edda; /* Un borde verde muy clarito */
+    border-radius: 8px; /* Esquinas suaves para las cajas */
+    box-sizing: border-box; /* Para que el padding no "agrandes" la caja */
+    font-size: 1em; /* Tamaño de letra normal */
+    color: #333; /* Color de texto oscuro para lo que escribimos */
+}
+
+/* Cuando haces clic en una caja, que el borde se ilumine de verde */
+.input-group input[type="number"]:focus {
+    border-color: #66bb6a; /* Un verde más vivo al enfocar */
+    outline: none; /* Quitamos el contorno predeterminado del navegador */
+}
+
+/* El texto de ejemplo que aparece dentro de las cajas */
+.input-group input[type="number"]::placeholder {
+    color: #a0a6a0; /* Un gris verdoso clarito para el ejemplo */
+}
+
+/* ¡El botón de "Calcular Área"! */
+button {
+    background-color: #66bb6a; /* Un verde amigable y llamativo */
+    color: white; /* Texto blanco en el botón */
+    padding: 12px 20px; /* Espacio interno del botón */
+    border: none; /* Sin borde */
+    border-radius: 8px; /* Esquinas redondeadas */
+    cursor: pointer; /* Que aparezca la manita al pasar el ratón */
+    font-size: 1.1em; /* Un buen tamaño para el texto del botón */
+    font-weight: bold; /* Texto en negrita */
+    transition: background-color 0.3s ease, transform 0.1s ease; /* Animaciones suaves */
+}
+
+/* Cuando el ratón está encima del botón */
+button:hover {
+    background-color: #4CAF50; /* Un verde un poco más oscuro */
+    transform: translateY(-1px); /* Un pequeño "salto" hacia arriba */
+}
+
+/* Cuando haces clic en el botón */
+button:active {
+    transform: translateY(0); /* Vuelve a su posición normal */
+}

@@ -1,0 +1,96 @@
+/* Esto es como el "lienzo" de nuestra página. */
+/* Le damos un color de fondo suave y centramos todo bonito. */
+body {
+    font-family: 'Segoe UI', sans-serif; /* Una fuente amable y moderna */
+    background-color: #f0f8ff; /* Un azul bebé muy clarito, como el cielo */
+    display: flex; /* Para poner las cosas en el medio */
+    justify-content: center; /* Centrar de izquierda a derecha */
+    align-items: center; /* Centrar de arriba a abajo */
+    min-height: 100vh; /* Que ocupe toda la pantalla, al menos */
+    margin: 0; /* Quitamos bordes invisibles que a veces aparecen */
+}
+
+/* Esta es la "caja" donde vive nuestra calculadora. */
+/* Le damos un fondo blanco, esquinas redondas y una sombra suave para que resalte. */
+.container {
+    background-color: #ffffff; /* Blanco puro para la calculadora */
+    padding: 30px; /* Espacio adentro para que no esté todo apretado */
+    border-radius: 15px; /* Bordes bien redonditos, ¡más amigable! */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Una sombra ligera, como flotando */
+    text-align: center; /* Todo el texto en el centro de la caja */
+    max-width: 380px; /* Un tamaño cómodo, ni muy grande ni muy chico */
+    width: 90%; /* Que se adapte a pantallas pequeñas */
+}
+
+/* El título principal de nuestra calculadora */
+h1 {
+    color: #4682b4; /* Un azul acero, sereno y claro */
+    margin-bottom: 15px; /* Espacio abajo del título */
+    font-size: 1.8em; /* Un tamaño de letra agradable */
+}
+
+/* El pequeño texto de explicación */
+p {
+    color: #6a737d; /* Un gris amigable */
+    margin-bottom: 25px; /* Espacio para respirar antes de los campos */
+}
+
+/* Cada grupo de entrada: la etiqueta y el cuadro para escribir */
+.input-group {
+    margin-bottom: 20px; /* Separación entre los campos */
+    text-align: left; /* Alineamos las etiquetas a la izquierda */
+}
+
+/* Las etiquetas (Peso, Estatura) */
+.input-group label {
+    display: block; /* Para que cada etiqueta vaya en su propia línea */
+    margin-bottom: 8px; /* Espacio entre el texto y la caja */
+    color: #3e444a; /* Un gris oscuro, fácil de leer */
+    font-weight: bold; /* Un poco más de fuerza a la etiqueta */
+}
+
+/* Las cajas donde escribimos los números */
+.input-group input[type="number"] {
+    width: 100%; /* Que ocupe todo el ancho de su espacio */
+    padding: 10px; /* Espacio adentro de la caja */
+    border: 1px solid #cce7ff; /* Un borde azul muy suave */
+    border-radius: 8px; /* Cajas con esquinas redondas */
+    box-sizing: border-box; /* Para que el padding no "agrandes" las cajas */
+    font-size: 1em; /* Tamaño de letra normal */
+    color: #333; /* Color de texto oscuro para lo que escribimos */
+}
+
+/* Cuando haces clic en una caja, que se ponga un borde azul más vibrante */
+.input-group input[type="number"]:focus {
+    border-color: #5dade2; /* Un azul más vivo al enfocar */
+    outline: none; /* Quitamos el contorno feo que pone el navegador */
+}
+
+/* El texto de ejemplo dentro de las cajas (placeholder) */
+.input-group input[type="number"]::placeholder {
+    color: #a0a6b0; /* Un gris clarito para el texto de ejemplo */
+}
+
+/* ¡El botón de "Calcular"! */
+button {
+    background-color: #5dade2; /* Un azul agradable */
+    color: white; /* Texto blanco en el botón */
+    padding: 12px 20px; /* Espacio dentro del botón */
+    border: none; /* Sin bordes */
+    border-radius: 8px; /* Esquinas redondas */
+    cursor: pointer; /* Que aparezca la manita cuando pasas el ratón */
+    font-size: 1.1em; /* Un buen tamaño para el texto del botón */
+    font-weight: bold; /* Texto en negrita */
+    transition: background-color 0.3s ease, transform 0.1s ease; /* Pequeñas animaciones suaves */
+}
+
+/* Cuando el ratón está encima del botón */
+button:hover {
+    background-color: #4682b4; /* Se pone un azul un poco más oscuro */
+    transform: translateY(-1px); /* Un pequeño "salto" hacia arriba */
+}
+
+/* Cuando haces clic en el botón */
+button:active {
+    transform: translateY(0); /* Vuelve a su lugar */
+}
